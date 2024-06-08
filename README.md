@@ -19,6 +19,12 @@ Clone this repository
 
 ```bash
 https://github.com/diyorarti/cataract-classification.git
+```
 
-
-
+## STEP 01- Create a conda environment after opening the repository
+ ```bash
+ conda create -n venv python=3.8 -y
+ ``` 
+ ```bash
+ conda activate venv
+ ```
