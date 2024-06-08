@@ -9,3 +9,12 @@
 6. Update the pipeline
 7. Update the main.py
 8. Update the dvc.yaml
+
+
+# How to run ?
+
+## Steps 
+Clone this repository 
+'''bash
+https://github.com/diyorarti/cataract-classification.git
+
