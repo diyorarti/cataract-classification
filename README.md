@@ -5,6 +5,7 @@ The Cataract Classification project is a deep learning application designed to c
 This project follows a modular structure that allows data ingestion, model preparation, training, and evaluation to be handled separately, ensuring flexibility and scalability for future improvements. Additionally, this project is integrated with DVC (Data Version Control) to track the various stages of the pipeline and model evolution over time.
 
 ## Project Folder Structure:
+```bash
 Cataract-Classification/
 │
 ├── .github/workflows/.gitkeep
@@ -39,7 +40,7 @@ Cataract-Classification/
 ├── main.py
 ├── app.py
 ├── research/trials.ipynb
-
+```
 ## Key Features:
 
 1. **Data Ingestion**: Automates the process of downloading and unzipping the dataset, which is sourced from a URL.
