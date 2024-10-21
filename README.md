@@ -1,30 +1,5 @@
-# cataract-classification
+# Cataract Classification Project
+## Project Overview: 
+The Cataract Classification project is a deep learning application designed to classify cataract images using a Convolutional Neural Network (CNN). The project pipeline automates the process from data ingestion to model training and evaluation, deploying a pre-trained VGG16 model to expedite the process. The application is developed in Python, utilizing various libraries like TensorFlow and Flask for model development and deployment.
 
-## Workflows
-1. Update config.yaml
-2. Update params.yaml
-3. Update the entity
-4. Update the configuration manager in src config
-5. Update the components
-6. Update the pipeline
-7. Update the main.py
-8. Update the dvc.yaml
-
-
-# How to run ?
-
-## Steps 
-Clone this repository 
-## STEP 01- Create a conda environment after opening the repository
-
-```bash
-https://github.com/diyorarti/cataract-classification.git
-```
-
-## STEP 01- Create a conda environment after opening the repository
- ```bash
- conda create -n venv python=3.8 -y
- ``` 
- ```bash
- conda activate venv
- ```
+This project follows a modular structure that allows data ingestion, model preparation, training, and evaluation to be handled separately, ensuring flexibility and scalability for future improvements. Additionally, this project is integrated with DVC (Data Version Control) to track the various stages of the pipeline and model evolution over time.
