@@ -6,40 +6,64 @@ This project follows a modular structure that allows data ingestion, model prepa
 
 ## Project Folder Structure:
 ```bash
-Cataract-Classification/
-│
-├── .github/workflows/.gitkeep
-├── config/config.yaml
-├── dvc.yaml
-├── params.yaml
-├── requirements.txt
-├── setup.py
-├── Dockerfile
-│
+.
+├── .dvc/
+├── .github/workflows/
+├── .gitignore
+├── artifacts/
+│   ├── data_ingestion/
+│   │   ├── data.zip
+│   │   ├── train/
+│   │   ├── immature/
+│   │   └── mature/
+│   ├── prepare_base_model/
+│   │   ├── base_model.h5
+│   │   └── base_model_updated.h5
+├── config/
+│   ├── config.yaml
+├── research/
+│   ├── 01_data_ingestion.ipynb
+│   ├── 02_prepare_base_model.ipynb
+│   ├── 03_prepare_callbacks.ipynb
+│   ├── 04_training.ipynb
+│   ├── 05_model_evaluation.ipynb
+│   └── trials.ipynb
 ├── src/
 │   ├── CataractClassifier/
 │   │   ├── components/
 │   │   │   ├── data_ingestion.py
+│   │   │   ├── evaluation.py
 │   │   │   ├── prepare_base_model.py
 │   │   │   ├── prepare_callbacks.py
-│   │   │   ├── training.py
-│   │   │   ├── evaluation.py
+│   │   │   └── training.py
+│   │   ├── config/
+│   │   │   └── configuration.py
+│   │   ├── constants/
+│   │   │   └── __init__.py
+│   │   ├── entity/
+│   │   │   └── config_entity.py
 │   │   ├── pipeline/
+│   │   │   ├── predict.py
 │   │   │   ├── stage_01_data_ingestion.py
 │   │   │   ├── stage_02_prepare_base_model.py
 │   │   │   ├── stage_03_training.py
-│   │   │   ├── stage_04_evaluation.py
-│   │   ├── config/
-│   │   │   ├── configuration.py
+│   │   │   └── stage_04_evaluation.py
 │   │   ├── utils/
-│   │   ├── entity/
-│   │   ├── constants/
-│   │   ├── __init__.py
-│
-├── templates/index.html
-├── main.py
+│   │   │   ├── common.py
+│   │   └── templates/
+│   │       └── index.html
+├── .dvcignore
+├── Dockerfile
+├── LICENSE
+├── README.md
 ├── app.py
-├── research/trials.ipynb
+├── dvc.yaml
+├── inputImage.jpg
+├── main.py
+├── params.yaml
+├── requirements.txt
+├── scores.json
+└── setup.py
 ```
 ## Key Features:
 
