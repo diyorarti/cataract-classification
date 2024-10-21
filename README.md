@@ -73,35 +73,47 @@ Cataract-Classification/
 5. **Prediction API**: A Flask-based API is built to allow real-time predictions via a web interface.
 
 ## Key Components
-1. **Data Ingestion**
-Purpose: Downloads the dataset and extracts the necessary files.                                                 
-Files: data_ingestion.py handles downloading and extracting files.                                             
-dvc.yaml contains the data pipeline configuration.                                                                
-Output: Data is stored in the artifacts/data_ingestion/ folder.                                             
-2. **Base Model Preparation**
-Purpose: Prepares the base VGG16 model for transfer learning.
-Files: prepare_base_model.py initializes and updates the VGG16 model.
-Outputs base_model.h5 and base_model_updated.h5 in artifacts/prepare_base_model/.
-3. **Model Training**
-Purpose: Fine-tunes the pre-trained model on the cataract dataset.
-Files: training.py for handling model training using Keras.
-Model training configuration is stored in params.yaml.
-4. **Model Evaluation**
-Purpose: Evaluates the model performance using the validation dataset.
-Files:evaluation.py loads the trained model and computes metrics.
-Stores evaluation results in scores.json.
-5. **Deployment**
-Purpose: Deploy the model as a web application using Flask.
-Files: app.py handles the web interface.
-templates/index.html provides the front-end for uploading images.
-6. **Notebooks**
-Research and Experiments:
-Jupyter notebooks for each stage of the pipeline are found in the research/ folder.
 
-## Technologies Used
--**Python**: Core programming language.
--**TensorFlow/Keras**: For deep learning model training.
--**Flask**: To deploy the model as a web application.
--**DVC**: For data version control.
--**Docker**: For containerizing the application.
--**Jupyter Notebooks**: For research and prototyping.
+1. Data Ingestion  
+   **Purpose**: Downloads the dataset and extracts the necessary files.  
+   **Files**:  
+   - `data_ingestion.py` handles downloading and extracting files.  
+   - `dvc.yaml` contains the data pipeline configuration.  
+   **Output**: Data is stored in the `artifacts/data_ingestion/` folder.
+
+2. Base Model Preparation  
+   **Purpose**: Prepares the base VGG16 model for transfer learning.  
+   **Files**:  
+   - `prepare_base_model.py` initializes and updates the VGG16 model.  
+   **Outputs**: `base_model.h5` and `base_model_updated.h5` in `artifacts/prepare_base_model/`.
+
+3. Model Training  
+   **Purpose**: Fine-tunes the pre-trained model on the cataract dataset.  
+   **Files**:  
+   - `training.py` for handling model training using Keras.  
+   **Configuration**: Model training configuration is stored in `params.yaml`.
+
+4. Model Evaluation  
+   **Purpose**: Evaluates the model performance using the validation dataset.  
+   **Files**:  
+   - `evaluation.py` loads the trained model and computes metrics.  
+   **Output**: Stores evaluation results in `scores.json`.
+
+5. Deployment  
+   **Purpose**: Deploy the model as a web application using Flask.  
+   **Files**:  
+   - `app.py` handles the web interface.  
+   - `templates/index.html` provides the front-end for uploading images.
+
+6. Notebooks  
+   **Research and Experiments**:  
+   - Jupyter notebooks for each stage of the pipeline are found in the `research/` folder.
+
+
+## Technologies Used:
+- Python: Core programming language.
+- TensorFlow/Keras: For deep learning model training.
+- Flask: To deploy the model as a web application.
+- DVC: For data version control.
+- Docker: For containerizing the application.
+- Jupyter Notebooks: For research and prototyping.
