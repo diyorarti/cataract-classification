@@ -74,10 +74,10 @@ Cataract-Classification/
 
 ## Key Components
 1. **Data Ingestion**
-Purpose: Downloads the dataset and extracts the necessary files.
-Files: data_ingestion.py handles downloading and extracting files.
-dvc.yaml contains the data pipeline configuration.
-Output: Data is stored in the artifacts/data_ingestion/ folder.
+Purpose: Downloads the dataset and extracts the necessary files.                                                 
+Files: data_ingestion.py handles downloading and extracting files.                                             
+dvc.yaml contains the data pipeline configuration.                                                                
+Output: Data is stored in the artifacts/data_ingestion/ folder.                                             
 2. **Base Model Preparation**
 Purpose: Prepares the base VGG16 model for transfer learning.
 Files: prepare_base_model.py initializes and updates the VGG16 model.
@@ -99,9 +99,9 @@ Research and Experiments:
 Jupyter notebooks for each stage of the pipeline are found in the research/ folder.
 
 ## Technologies Used
-**Python**: Core programming language.
-**TensorFlow/Keras**: For deep learning model training.
-**Flask**: To deploy the model as a web application.
-**DVC**: For data version control.
-**Docker**: For containerizing the application.
-**Jupyter Notebooks**: For research and prototyping.
+-**Python**: Core programming language.
+-**TensorFlow/Keras**: For deep learning model training.
+-**Flask**: To deploy the model as a web application.
+-**DVC**: For data version control.
+-**Docker**: For containerizing the application.
+-**Jupyter Notebooks**: For research and prototyping.
