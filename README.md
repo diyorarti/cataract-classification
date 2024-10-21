@@ -117,3 +117,50 @@ Cataract-Classification/
 - DVC: For data version control.
 - Docker: For containerizing the application.
 - Jupyter Notebooks: For research and prototyping.
+
+## Installation
+
+### Prerequisites
+- **Python** 3.8+
+- **Docker** (if you want to use the Dockerfile)
+- **DVC** (Data Version Control)
+- **TensorFlow** and **Keras**
+
+### Setup
+
+#### Clone the repository:
+```bash
+git clone https://github.com/diyorarti/Cataract-Classification.git  
+cd Cataract-Classification
+```
+## Install dependencies:
+```bash
+pip install -r requirements.txt
+```
+## Set up DVC and pull data:
+```bash
+dvc pull
+```
+
+# Usage
+## Training
+To train the model, run:
+```bash
+python main.py
+```
+## Prediction (Web App)
+To start the Flask web application:
+```bash
+python app.py
+```
+## Configuration
+**Model Configuration**: 
+ - config/config.yaml contains model-specific configurations such as image size, batch size, and learning rate.
+**Parameters**: 
+ - params.yaml specifies additional hyperparameters for the training process.
+
+# Results
+The model achieves an accuracy of 86.07%, with a loss of 1.0325 due to lack of GPU, but the model's accuracy can be imporoved. These metrics are stored in scores.json.
+
+# Acknowledgments
+This project was inspired by various tutorials and datasets available for transfer learning and deep learning with Keras.
